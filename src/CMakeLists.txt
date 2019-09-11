@@ -42,8 +42,8 @@ ENDFOREACH()
 
 #Blas Cuda wrapper
 IF (KOKKOSKERNELS_ENABLE_TPL_CUBLAS OR KOKKOSKERNELS_ENABLE_TPL_MAGMA)
-  APPEND_GLOB(HEADERS ${DIR}/impl/tpls/KokkosBlas_Cuda_tpl.hpp)
-  APPEND_GLOB(SOURCES ${DIR}/impl/tpls/KokkosBlas_Cuda_tpl.cpp)
+  APPEND_GLOB(HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/impl/tpls/KokkosBlas_Cuda_tpl.hpp)
+  APPEND_GLOB(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/impl/tpls/KokkosBlas_Cuda_tpl.cpp)
 ENDIF()
 
 #Include BLAS, Blas host wrapper
